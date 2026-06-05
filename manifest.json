@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Bookmarker",
+    "version": "1.0",
+    "description": "Bookmark timestamps in YouTube videos with notes",
+    "permissions": [
+      "storage",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "https://*.youtube.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["contentScript.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+    "16": "icons/bookmark16.png",
+    "48": "icons/bookmark48.png",
+    "128": "icons/bookmark128.png"
+        }
+    },
+    "icons": {
+    "16": "icons/bookmark16.png",
+     "48": "icons/bookmark48.png",
+     "128": "icons/bookmark128.png"
+    }
+  }
